@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="./normie-logo.png" alt="Normie" width="96" height="96" />
+  <img src="./normie-banner.png" alt="Normie" width="100%" />
+</p>
+
+<p align="center">
+  <img src="./normie-logo.png" alt="Normie mark" width="96" height="96" />
 </p>
 
 <h1 align="center">Normie</h1>
