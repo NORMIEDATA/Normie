@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="https://x.com/normiedata">X / Twitter</a> ·
+  <a href="https://github.com/NORMIEDATA/Normie">GitHub</a> ·
   Trial under evaluation with foundation labs, autonomy, robotics &amp; manufacturing teams
 </p>
 
@@ -34,20 +35,28 @@ Contributors connect a wallet, upload media, and earn participation rewards when
 ## How it works
 
 ```text
-Capture → Upload → Vision verify → Normie Asset ID → Dataset admission
+Capture → Upload → AI agent (strict) → Normie Asset ID → Dataset admission
                                               ↓
-                                    Points / reward ledger
-                                              ↓
-                              Claim window → Robinhood Chain (ETH)
+                         NormiePayouts.pay() → ETH on Robinhood Chain
 ```
 
 1. **Upload** — street photos (and later video / structured logs)  
-2. **Verify** — automated vision checks for authenticity, quality, originality, and street labels  
+2. **Verify** — strict AI agent checks for authenticity, quality, originality, and street labels  
 3. **Admit** — approved assets receive a Normie Asset ID and join Normie Streets  
-4. **Prove** — content fingerprints roll into Merkle batches for public audit  
-5. **Claim** — points convert to ETH claims on **Robinhood Chain only** (chain ID `4663`)
+4. **Pay** — ~$1 of ETH pushed instantly via **NormiePayouts** (max 3 / wallet / day)  
+5. **Prove** — content fingerprints roll into Merkle batches for public audit  
 
 Unverified or synthetic uploads do **not** enter the payout rail.
+
+---
+
+## Smart contracts
+
+Live payout contract on Robinhood Chain — see **[contracts/](./contracts/)**.
+
+| Contract | Address |
+|----------|---------|
+| **NormiePayouts** | [`0xc5fc6241f3680f37e718c6fed99fa5352d872558`](https://robinhoodchain.blockscout.com/address/0xc5fc6241f3680f37e718c6fed99fa5352d872558) |
 
 ---
 
@@ -58,9 +67,11 @@ Unverified or synthetic uploads do **not** enter the payout rail.
 | Chain | Robinhood Chain |
 | Chain ID | `4663` |
 | Asset | **ETH only** |
-| Source | Normie ops / treasury wallet |
+| Amount (trial) | ~**$1** ETH per verified photo |
+| Cap | **3** paid photos / wallet / UTC day |
+| Source | [`NormiePayouts`](./contracts/) contract balance |
 | Destination | Contributor claim wallet |
-| Eligibility | Verified, reward-qualified assets only |
+| Eligibility | Strict AI-agent verified street photos only |
 
 No bank rails. No alternate L2s for settlement in v1.
 
@@ -159,8 +170,10 @@ See [SECURITY.md](./SECURITY.md).
 
 ## Links
 
+- GitHub: [github.com/NORMIEDATA/Normie](https://github.com/NORMIEDATA/Normie)  
 - X: [x.com/normiedata](https://x.com/normiedata)  
-- Explorer (Robinhood Chain): [robinhoodchain.blockscout.com](https://robinhoodchain.blockscout.com)  
+- Contract: [NormiePayouts on Blockscout](https://robinhoodchain.blockscout.com/address/0xc5fc6241f3680f37e718c6fed99fa5352d872558)  
+- Explorer: [robinhoodchain.blockscout.com](https://robinhoodchain.blockscout.com)  
 
 ---
 

@@ -29,18 +29,20 @@ Private object storage for contributor media; public dataset exposure is control
 ### Settlement
 Robinhood Chain · ETH · chain ID `4663`.
 
-Normie ops wallet → qualified contributor wallets after verification + reward allocation.
+**NormiePayouts** contract holds ETH. After a strict AI-agent admit, an operator calls `pay(contributor, wei, assetId)` and ETH transfers instantly (max 3 / wallet / day).
+
+See [contracts/README.md](./contracts/README.md).
 
 ## Trust model (trial)
 
 | Layer | Trust |
 |-------|--------|
-| Verification | Normie-operated vision pipeline |
+| Verification | Normie AI agent (strict, fail-closed) |
 | Ledger | Append-only events queryable in product |
 | Merkle | Computed over verified fingerprints |
-| Payouts | Custodial ops wallet (trial) |
+| Payouts | On-chain `NormiePayouts` with operator push |
 
-On-chain Merkle anchors and/or claim contracts are optional upgrades — not required to run the trial supply network.
+On-chain Merkle root anchors remain a later provenance upgrade.
 
 ## What is intentionally private
 

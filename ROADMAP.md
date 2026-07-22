@@ -3,15 +3,14 @@
 ## Phase 0 — Trial (current)
 - Normie Streets as the single launch dataset  
 - Wallet-attributed contributions  
-- Vision verification + Normie Asset IDs  
-- Reward points ledger  
-- Public audit event stream  
-- Claim UX framed for Robinhood Chain ETH  
+- Strict AI-agent verification + Normie Asset IDs  
+- **NormiePayouts live** — ~$1 ETH / verified photo, max 3 / day  
+- Reward points + public audit event stream  
 - Buyer trials (labs / autonomy / robotics / manufacturing)
 
-## Phase 1 — Production claims
-- Live ETH settlements from Normie payout wallet  
-- Clear qualified-asset → payout mapping  
+## Phase 1 — Scale claims
+- Sustained ETH funding of the payout contract  
+- Clear qualified-asset → payout mapping in product UI  
 - Hardened rate limits & abuse controls  
 - Public status / coverage dashboards
 
@@ -20,11 +19,7 @@
 - Explorer-linked batch receipts  
 - Optional third-party audit exports
 
-## Phase 3 — Optional contracts
-Only if buyers / contributors require trustless claims:
-
+## Phase 3 — Trustless upgrades
 - On-chain root registry  
-- Claim distributor against published roots  
+- Contributor pull-claims against published roots (if required)  
 - Transparent treasury accounting
-
-Until then, Normie runs as a verified supply network with custodial ETH settlement.
